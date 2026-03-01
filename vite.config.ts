@@ -1,4 +1,11 @@
-import tailwindcss from '@tailwindcss/vite';
+export default defineConfig(({mode}) => {
+  return {
+    base: '/OXINE-SOVEREIGN/', // <--- ADD THIS LINE (e.g., '/oxine-sovereign/')
+    plugins: [react(), tailwindcss()],
+    // ... rest of your config
+  }
+})
+  import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig, loadEnv} from 'vite';
